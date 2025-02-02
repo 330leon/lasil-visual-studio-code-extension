@@ -1,7 +1,7 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "LASIL",
-	"scopeName": "source.lasil",
+	"name": "vams",
+	"scopeName": "source.vams",
 	"patterns": [
 		{
 			"include": "#keywords"
@@ -26,7 +26,7 @@
 		"keywords": {
 			"patterns": [
 				{
-					"name": "keyword.control.lasil",
+					"name": "keyword.control.vams",
 					"match": "\\b(define|class|method|method_end|class_end)\\b"
 				}
 			]
@@ -34,26 +34,26 @@
 		"commands": {
 			"patterns": [
 				{
-					"name": "support.function.task.lasil",
+					"name": "support.function.task.vams",
 					"match": "\\b(TASK|WAIT_TASK|WAIT_ALL_TASK)\\b"
 				},
 				{
-					"name": "keyword.operator.lasil",
+					"name": "keyword.operator.vams",
 					"match": "\\b(PRINT|RETURN|CURTIME|SUB|TOSTRING|ADD_STRING|SWITCH|POP|ADD|INCREMENT)\\b"
 				},
 				{
-					"name": "support.function.command.lasil",
+					"name": "support.function.command.vams",
 					"match": "\\b(INSERT|JUMP_IF_NOT_EQUALS)\\b"
 				}
 			]
 		},
 		"strings": {
-			"name": "string.quoted.double.lasil",
+			"name": "string.quoted.double.vams",
 			"begin": "\"",
 			"end": "\"",
 			"patterns": [
 				{
-					"name": "constant.character.escape.lasil",
+					"name": "constant.character.escape.vams",
 					"match": "\\\\."
 				}
 			]
@@ -61,7 +61,7 @@
 		"comments": {
 			"patterns": [
 				{
-					"name": "comment.lasil",
+					"name": "comment.vams",
 					"match": "#.*"
 				}
 			]
@@ -69,7 +69,7 @@
 		"types": {
 			"patterns": [
 				{
-					"name": "storage.type.lasil",
+					"name": "storage.type.vams",
 					"match": "\\b(System\\.Int32|System\\.String|string|bool|float|double|char)\\b"
 				}
 			]
@@ -77,11 +77,11 @@
 		"methods": {
 			"patterns": [
 				{
-					"name": "keyword.other.async.lasil",
+					"name": "keyword.other.async.vams",
 					"match": "\\basync\\b"
 				},
 				{
-					"name": "entity.name.function.lasil",
+					"name": "entity.name.function.vams",
 					"match": "\\bdefine\\s+method\\s+(async\\s+)?([a-zA-Z_][a-zA-Z0-9_]*)\\b"
 				}
 			]

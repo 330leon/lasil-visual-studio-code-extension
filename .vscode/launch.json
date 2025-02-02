@@ -6,7 +6,7 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
-			"name": "LASIL Extension",
+			"name": "vams Extension",
 			"type": "extensionHost",
 			"request": "launch",
 			"args": [

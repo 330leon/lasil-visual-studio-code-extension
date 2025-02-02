@@ -1,6 +1,6 @@
 {
-  "name": "lasil",
-  "displayName": "LASIL",
+  "name": "vams",
+  "displayName": "vams",
   "description": "low assembly scripting interrupt language",
   "version": "0.0.1",
   "engines": {
@@ -11,15 +11,15 @@
   ],
   "contributes": {
     "languages": [{
-      "id": "lasil",
-      "aliases": ["lasil", "lasil"],
-      "extensions": [".lasil"],
+      "id": "vams",
+      "aliases": ["vams", "vams"],
+      "extensions": [".vams"],
       "configuration": "./language-configuration.json"
     }],
     "grammars": [{
-      "language": "lasil",
-      "scopeName": "source.lasil",
-      "path": "./syntaxes/lasil.tmLanguage.json"
+      "language": "vams",
+      "scopeName": "source.vams",
+      "path": "./syntaxes/vams.tmLanguage.json"
     }]
   }
 }
