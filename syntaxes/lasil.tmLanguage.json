@@ -39,7 +39,7 @@
 				},
 				{
 					"name": "keyword.operator.lasil",
-					"match": "\\b(PRINT|RETURN|CURTIME|SUB|TOSTRING|ADD_STRING|SWITCH|POP|ADD)\\b"
+					"match": "\\b(PRINT|RETURN|CURTIME|SUB|TOSTRING|ADD_STRING|SWITCH|POP|ADD|INCREMENT)\\b"
 				},
 				{
 					"name": "support.function.command.lasil",
