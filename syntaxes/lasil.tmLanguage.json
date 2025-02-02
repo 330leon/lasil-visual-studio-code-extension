@@ -3,62 +3,88 @@
 	"name": "LASIL",
 	"scopeName": "source.lasil",
 	"patterns": [
-	  {
-		"include": "#keywords"
-	  },
-	  {
-		"include": "#commands"
-	  },
-	  {
-		"include": "#strings"
-	  },
-	  {
-		"include": "#comments"
-	  }
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#commands"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#types"
+		},
+		{
+			"include": "#methods"
+		}
 	],
 	"repository": {
-	  "keywords": {
-		"patterns": [
-		  {
-			"name": "keyword.control.lasil",
-			"match": "\\b(define|class|method|method_end|class_end)\\b"
-		  }
-		]
-	  },
-	  "commands": {
-		"patterns": [
-		  {
-			"name": "support.function.task.lasil",
-			"match": "\\b(TASK|WAIT_TASK|WAIT_ALL_TASK)\\b"
-		  },
-		  {
-			"name": "keyword.operator.lasil",
-			"match": "\\b(PRINT|RETURN|CURTIME|SUB|TOSTRING|ADD_STRING|SWITCH|POP)\\b"
-		  },
-		  {
-			"name": "support.function.command.lasil",
-			"match": "\\b(INSERT|JUMP_IF_NOT_EQUALS)\\b"
-		  }
-		]
-	  },
-	  "strings": {
-		"name": "string.quoted.double.lasil",
-		"begin": "\"",
-		"end": "\"",
-		"patterns": [
-		  {
-			"name": "constant.character.escape.lasil",
-			"match": "\\\\."
-		  }
-		]
-	  },
-	  "comments": {
-		"patterns": [
-		  {
-			"name": "comment.line.lasil",
-			"match": "#.*$"
-		  }
-		]
-	  }
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.lasil",
+					"match": "\\b(define|class|method|method_end|class_end)\\b"
+				}
+			]
+		},
+		"commands": {
+			"patterns": [
+				{
+					"name": "support.function.task.lasil",
+					"match": "\\b(TASK|WAIT_TASK|WAIT_ALL_TASK)\\b"
+				},
+				{
+					"name": "keyword.operator.lasil",
+					"match": "\\b(PRINT|RETURN|CURTIME|SUB|TOSTRING|ADD_STRING|SWITCH|POP|ADD)\\b"
+				},
+				{
+					"name": "support.function.command.lasil",
+					"match": "\\b(INSERT|JUMP_IF_NOT_EQUALS)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.lasil",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.lasil",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.lasil",
+					"match": "#.*"
+				}
+			]
+		},
+		"types": {
+			"patterns": [
+				{
+					"name": "storage.type.lasil",
+					"match": "\\b(System\\.Int32|System\\.String|string|bool|float|double|char)\\b"
+				}
+			]
+		},
+		"methods": {
+			"patterns": [
+				{
+					"name": "keyword.other.async.lasil",
+					"match": "\\basync\\b"
+				},
+				{
+					"name": "entity.name.function.lasil",
+					"match": "\\bdefine\\s+method\\s+(async\\s+)?([a-zA-Z_][a-zA-Z0-9_]*)\\b"
+				}
+			]
+		}
 	}
-  }
+}
