@@ -1,0 +1,64 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "LASIL",
+	"scopeName": "source.lasil",
+	"patterns": [
+	  {
+		"include": "#keywords"
+	  },
+	  {
+		"include": "#commands"
+	  },
+	  {
+		"include": "#strings"
+	  },
+	  {
+		"include": "#comments"
+	  }
+	],
+	"repository": {
+	  "keywords": {
+		"patterns": [
+		  {
+			"name": "keyword.control.lasil",
+			"match": "\\b(define|class|method|method_end|class_end)\\b"
+		  }
+		]
+	  },
+	  "commands": {
+		"patterns": [
+		  {
+			"name": "support.function.task.lasil",
+			"match": "\\b(TASK|WAIT_TASK|WAIT_ALL_TASK)\\b"
+		  },
+		  {
+			"name": "keyword.operator.lasil",
+			"match": "\\b(PRINT|RETURN|CURTIME|SUB|TOSTRING|ADD_STRING|SWITCH|POP)\\b"
+		  },
+		  {
+			"name": "support.function.command.lasil",
+			"match": "\\b(INSERT|JUMP_IF_NOT_EQUALS)\\b"
+		  }
+		]
+	  },
+	  "strings": {
+		"name": "string.quoted.double.lasil",
+		"begin": "\"",
+		"end": "\"",
+		"patterns": [
+		  {
+			"name": "constant.character.escape.lasil",
+			"match": "\\\\."
+		  }
+		]
+	  },
+	  "comments": {
+		"patterns": [
+		  {
+			"name": "comment.line.lasil",
+			"match": "#.*$"
+		  }
+		]
+	  }
+	}
+  }

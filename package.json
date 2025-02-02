@@ -1,0 +1,25 @@
+{
+  "name": "lasil",
+  "displayName": "LASIL",
+  "description": "low assembly scripting interrupt language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "lasil",
+      "aliases": ["lasil", "lasil"],
+      "extensions": [".lasil"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "lasil",
+      "scopeName": "source.lasil",
+      "path": "./syntaxes/lasil.tmLanguage.json"
+    }]
+  }
+}
